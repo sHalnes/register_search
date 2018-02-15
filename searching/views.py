@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from .models import SearchResults
 
-# Create your views here.
+
+def index(request):
+    data = ['first', 'second']
+    return render(request, 'index.html',context={'data': data})
