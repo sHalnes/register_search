@@ -25,6 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('searching/', include('searching.urls')),
     path('', RedirectView.as_view(url='/searching')),
-    #static(settings.STATIC_URL, document_root=settings.STATIC_ROOT),
+    static(settings.STATIC_URL, document_root=settings.STATIC_ROOT),
 
 ]
