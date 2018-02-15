@@ -18,3 +18,6 @@ class SearchResults(models.Model):
         :return: self.org_name, self.n_visits, self.last_visited
         '''
         return '{} vas visited {} times. Last visit: {}'.format(self.org_name, self.n_visits, self.last_visited)
+
+
+# we can also add a new function to display 5 most popular searches
