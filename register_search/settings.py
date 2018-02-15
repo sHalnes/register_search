@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
-    'register_search',
+    'searching.apps.SearchingConfig',
 ]
 
 MIDDLEWARE = [
@@ -104,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Oslo'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
