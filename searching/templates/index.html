@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello world</title>
-    some simple text
+{% extends "base.html" %}
 
-
-
-
+{% block content %}
+    <h1>Here goes a kind of tittle</h1>
+    <p>some simple text</p>
+    {% for element in data %}
+    <ul>
+        <li>{{ element }}</li>
+    </ul>
+    {% endfor %}
     <a href="{% url 'index' %}">Home</a>
-</head>
-<body>
 
-</body>
-</html>
+{% endblock %}
+
