@@ -2,35 +2,20 @@
 
 {% block content %}
     <h1>Søk i Enhetsregisteret</h1>
-
+<form id="form" role="form" action="{% url 'index' %}" method="post">
     {% csrf_token %}
-    <input type="text" id="search" name="search" />
+    <input name="search" type="search" id="search" placeholder="Tast inn regnum eller navn" />
+    <button type="submit">SøK!</button>
+</form>
 
-    <ul id="search-results">
+{% if query %}
 
-    </ul>
-
-    {% if data.count > 1 %}
-
-{% for element in data %}
-
-<li> {{ element}}</a></li>
-
-{% endfor %}
-
+    {% include 'search.html' %}
 {% else %}
 
-<li>Ingenting å vise</li>
+    <h1 class="h3">Ingenting å vise. <br> Prøv på nytt.</h1>
 
 {% endif %}
 
 
-    {% for element in data %}
-    <ul>
-        <li>{{ element }}</li>
-    </ul>
-    {% endfor %}
-    <a href="{% url 'index' %}">Home</a>
-
-{% endblock %}
 

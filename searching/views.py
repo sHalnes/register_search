@@ -2,7 +2,25 @@ from django.shortcuts import render
 from .models import SearchResults
 from .brreg_API import find_organization
 
+from django.views.generic.base import View
+from django.http import HttpResponse
+from django.template import loader
 
+class SearchSubmitView(View):
+    template = 'index.html'
+    response_message = 'This is the response'
+
+    def post(self, request):
+        template = loader.get_template(self.template)
+        query = request.POST.get('search', '')
+
+        # a simple query
+        data = find_organization(query)
+
+        context = {'title':self.response_message, 'query':query, 'data':data}
+        rendered_template = template.render(context, request)
+        return HttpResponse(rendered_template, content_type='text/html')
+'''
 def index(request):
     if request.method == 'POST':
         search_text = request.POST['search_text']
@@ -27,3 +45,4 @@ def search(request):
     if not data:
         data = ['Foretak med organisasjosnummeret {} er ikke registrert'.format(search_text)]
     return render(request, 'search.html', context={'data': data})
+'''

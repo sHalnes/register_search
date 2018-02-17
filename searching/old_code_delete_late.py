@@ -1,5 +1,21 @@
 # -*- coding: utf-8 -*-
 
+
+'''  {% if data.count > 1 %}
+
+{% for element in data %}
+
+<li> {{ element}}</a></li>
+
+{% endfor %}
+
+{% else %}
+
+<li>Ingenting å vise</li>
+
+{% endif %}'''
+
+
 import json
 import requests
 
