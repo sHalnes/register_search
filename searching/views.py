@@ -9,5 +9,5 @@ def index(request):
 
     data = find_organization(org_num)
     if not data:
-        data = 'Foretak med organisasjosnummeret {} er ikke registrert'.format(org_num)
+        data = ['Foretak med organisasjosnummeret {} er ikke registrert'.format(org_num)]
     return render(request, 'index.html',context={'data': data})
