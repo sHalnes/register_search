@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Søk i Enhetsregisteret</h1>
+<form id="form" role="form" action="{% url 'index' %}" method="post">
+    {% csrf_token %}
+    <input name="search" type="search" id="search" placeholder="Tast inn regnum eller navn" />
+    <button type="submit">SøK!</button>
+</form>
+
+{% if query %}
+
+    {% include 'search.html' %}
+{% else %}
+
+    <h1 class="h3">Ingenting å vise. <br> Prøv på nytt.</h1>
+
+{% endif %}
+
+
+{% endblock %}
