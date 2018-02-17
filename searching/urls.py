@@ -1,5 +1,5 @@
 from django.urls import path
-from searching.views import SearchSubmitView
+#from searching.views import SearchSubmitView
 from . import views
 
 urlpatterns = [
