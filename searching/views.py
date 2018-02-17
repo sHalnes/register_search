@@ -7,7 +7,7 @@ from django.http import HttpResponse
 from django.template import loader
 
 class SearchSubmitView(View):
-    template = 'index.html'
+    template = 'templates/index.html'
     response_message = 'This is the response'
 
     def post(self, request):
