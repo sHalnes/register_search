@@ -59,19 +59,36 @@ def get_data_from_jsson(raw_data):
         'forretningsadresse': ['forretningsadresse', 'adresse', 'postnummer', 'poststed'],
         'konkurs': ['konkurs']
         }
+    keys_description = {
+        'organisasjonsnummer':'Organisasjonsnummer: ',
+        'navn':'Navn: ',
+        'registreringsdatoEnhetsregisteret': 'Registrert: ',
+        'antallAnsatte': 'Antall ansatte: ',
+        'hjemmeside': 'Hjemmeside: ',
+        'orgform': 'Organisasjonsform: ',
+        'naeringskode1': 'Oppgave: ',
+        'postadresse': 'Postadresse: ',
+        'beliggenhetsadresse': 'Beliggenhet: ',
+        'forretningsadresse': 'Beliggenhet: ',
+        'konkurs': 'Konkurs'
+    }
 
     # retrieve data from raw json
     for key in json_keys:
         if key in raw_data:
+            data_str = keys_description[key]
             #print(key)
             if len(json_keys[key]) > 1:
                 for underkey in range(1, len(json_keys[key])):
                     if json_keys[key][underkey] in raw_data[key]:
-                        data_to_return.append(raw_data[key][json_keys[key][underkey]])
+                        data_str +=('\n'+raw_data[key][json_keys[key][underkey]])
+                        #data_to_return.append(raw_data[key][json_keys[key][underkey]])
                         #print(raw_data[key][json_keys[key][underkey]])
             else:
-                data_to_return.append(raw_data[key])
-                print(raw_data[key])
+                data_str += ('\n' + raw_data[key])
+                #data_to_return.append(raw_data[key])
+                #print(raw_data[key])
+            data_to_return.append(data_str)
 
     return data_to_return
 

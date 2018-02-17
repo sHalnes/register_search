@@ -4,8 +4,8 @@ from .brreg_API import find_organization
 
 
 def index(request):
-    org_num = '000'
-#    org_num = '912660680'
+#    org_num = '000'
+    org_num = '912660680'
 
     data = find_organization(org_num)
     if not data:
