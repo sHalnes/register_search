@@ -1,0 +1,89 @@
+{
+'organisasjonsnummer': 974760673,
+'navn': 'REGISTERENHETEN I BRØNNØYSUND',
+'registreringsdatoEnhetsregisteret': '1995-08-09',
+'hjemmeside': 'www.brreg.no',
+'maalform': 'Bokmål',
+'registrertIFrivillighetsregisteret': 'N',
+'registrertIMvaregisteret': 'N',
+'registrertIForetaksregisteret': 'N',
+'registrertIStiftelsesregisteret': 'N',
+'antallAnsatte': 565,
+'orgform': {
+    'kode': 'ORGL',
+    'beskrivelse': 'Organisasjonsledd'
+    },
+'institusjonellSektorkode': {
+    'kode': '6100',
+    'beskrivelse': 'Statsforvaltningen'
+    },
+'naeringskode1': {
+    'kode': '84.110',
+    'beskrivelse': 'Generell offentlig administrasjon'
+    },
+'postadresse': {
+    'adresse': 'Postboks 900',
+    'postnummer': '8910',
+    'poststed': 'BRØNNØYSUND',
+    'kommunenummer': '1813',
+    'kommune': 'BRØNNØY',
+    'landkode': 'NO',
+    'land': 'Norge'
+    },
+'forretningsadresse': {
+    'adresse': 'Havnegata 48',
+    'postnummer': '8900',
+    'poststed': 'BRØNNØYSUND',
+    'kommunenummer': '1813',
+    'kommune': 'BRØNNØY',
+    'landkode': 'NO',
+    'land': 'Norge'
+    },
+'konkurs': 'N',
+'underAvvikling': 'N',
+'underTvangsavviklingEllerTvangsopplosning': 'N',
+'overordnetEnhet': 912660680,
+'links': [{
+    'rel': 'self',
+    'href': 'http://data.brreg.no/enhetsregisteret/enhet/974760673'
+    },
+ {'rel': 'overordnetEnhet', 'href': 'http://data.brreg.no/enhetsregisteret/enhet/912660680'}], 'organisasjonsform': 'ORGL'}
+
+
+{
+'organisasjonsnummer': 874714852,
+'navn': 'STATENS KARTVERK OSLO',
+'registreringsdatoEnhetsregisteret': '1995-08-10',
+'registrertIMvaregisteret': 'N',
+'antallAnsatte': 30,
+'orgform': {
+    'kode': 'BEDR',
+    'beskrivelse': 'Bedrift'
+    },
+'naeringskode1': {
+    'kode': '71.123',
+    'beskrivelse': 'Kart og oppmåling'
+    },
+'postadresse': {
+    'postnummer': '3507',
+    'poststed': 'HØNEFOSS',
+    'kommunenummer': '0605',
+    'kommune': 'RINGERIKE',
+    'landkode': 'NO',
+    'land': 'Norge'
+    },
+'beliggenhetsadresse': {
+    'adresse': 'Storgata 33',
+    'postnummer': '0184',
+    'poststed': 'OSLO',
+    'kommunenummer': '0301',
+    'kommune': 'OSLO',
+    'landkode': 'NO',
+    'land': 'Norge'
+    },
+'overordnetEnhet': 971040238,
+'links': [{
+    'rel': 'self',
+    'href': 'http://data.brreg.no/enhetsregisteret/underenhet/874714852'
+    },
+{'rel': 'overordnetEnhet', 'href': 'http://data.brreg.no/enhetsregisteret/enhet/971040238'}], 'organisasjonsform': 'BEDR'}
