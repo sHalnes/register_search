@@ -14,8 +14,8 @@ def index(request):
     data = find_organization(search_text)
     if not data:
         data = ['Foretak med organisasjosnummeret {} er ikke registrert'.format(search_text)]
-    return render(request, 'search.html', context={'data':data})
-    #return render(request, 'index.html',context={'data': data})
+    #return render(request, 'search.html', context={'data':data})
+    return render(request, 'index.html',context={'data': data})
 
 def search(request):
     pass
