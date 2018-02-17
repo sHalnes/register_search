@@ -1,0 +1,14 @@
+{% if data.count > 1 %}
+
+{% for element in data %}
+
+<!--li><a href="/articles/get/{{ element[0]}}/"> {{ element[1] }}</a></li-->
+<li> {{ element[0] }} {{ element[1] }}</a></li>
+
+{% endfor %}
+
+{% else %}
+
+<li>Ingenting å vise</li>
+
+{% endif %}
