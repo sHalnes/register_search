@@ -22,10 +22,10 @@ def find_organization(input_string):
         if response.status_code == 200:
             try:
                 raw_data = json.loads(response.text)
-                print(raw_data)
+                #print(raw_data)
                 data_to_return = get_data_from_jsson(raw_data)
             except(ValueError, KeyError, TypeError):
-                print('something went wrong')
+                #print('something went wrong')
                 return 0
         else:
             url = 'http://data.brreg.no/enhetsregisteret/underenhet'
@@ -34,10 +34,10 @@ def find_organization(input_string):
             if response.status_code == 200:
                 try:
                     raw_data = json.loads(response.text)
-                    print(raw_data)
+                    #print(raw_data)
                     data_to_return = get_data_from_jsson(raw_data)
                 except(ValueError, KeyError, TypeError):
-                    print('something went wrong')
+                    #print('something went wrong')
                     return 0
     #print(data_to_return)
     return data_to_return
@@ -87,7 +87,7 @@ def get_data_from_jsson(raw_data):
             if len(json_keys[key]) > 1:
                 for underkey in range(1, len(json_keys[key])):
                     if json_keys[key][underkey] in raw_data[key]:
-                        data_str += str(raw_data[key][json_keys[key][underkey]])
+                        data_str += str(raw_data[key][json_keys[key][underkey]])+' '
                         #data_to_return.append(raw_data[key][json_keys[key][underkey]])
                         #print(raw_data[key][json_keys[key][underkey]])
             else:
