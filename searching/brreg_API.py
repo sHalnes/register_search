@@ -17,7 +17,7 @@ def find_organization(input_string):
     if len(input_string) == 9 and input_string.isnumeric():
         url = 'http://data.brreg.no/enhetsregisteret/enhet'
         request_url = (url + '/{}.json').format(input_string)
-        response = requests.get(request_url)#(url, data=request_url)
+        response = requests.get(request_url)
         # looking for enhet or underenhet
         if response.status_code == 200:
             try:
@@ -36,8 +36,7 @@ def find_organization(input_string):
                 except(ValueError, KeyError, TypeError):
                     return 0
     return data_to_return
-            #print('no answer')
-            #return 'Foretak med organisasjosnummeret {} er ikke registrert'.format(input_string)
+
 
 def get_data_from_jsson(raw_data):
     '''
