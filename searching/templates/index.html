@@ -10,6 +10,20 @@
 
     </ul>
 
+    {% if data.count > 1 %}
+
+{% for element in data %}
+
+<li> {{ element}}</a></li>
+
+{% endfor %}
+
+{% else %}
+
+<li>Ingenting å vise</li>
+
+{% endif %}
+
 
     {% for element in data %}
     <ul>
