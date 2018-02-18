@@ -12,12 +12,12 @@ def index(request):
     response_message = 'This is the response from index'
     query = request.POST.get('search', '')
     data = []
-    reg_num = False
+    #reg_num = False
     # a simple query. not sure I need it here
     #if len(query) > 2:
      #   reg_num, data = find_organization(query)
-
-    return render(request, 'index.html', context={'title':response_message, 'data': data, 'reg_num':reg_num})
+    #return render(request, 'index.html', context={'title':response_message, 'data': data, 'reg_num':reg_num})
+    return render(request, 'index.html', context={'title':response_message, 'data': data})
 
 def search(request):
     response_message = ''
