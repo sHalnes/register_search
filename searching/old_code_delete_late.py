@@ -2,6 +2,9 @@
 
 
 '''
+
+<li> {{ x2 }} med organisasjonsnummeret {{ x1 }}</li>
+
                  <li><a href="{% url 'search' x1 %}">{{ x2 }}</a></li>
 
 
