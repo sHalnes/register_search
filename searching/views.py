@@ -15,10 +15,10 @@ def index(request):
     # a simple query
     data = find_organization(query)
 
-    context = {'title':response_message, 'query':query, 'data':data}
-    #    return render(request, 'index.html',context={'data': data})
-    rendered_template = render(request, 'index.html',context)
-    return HttpResponse(rendered_template, content_type='text/html')
+    #context = {'title':response_message, 'query':query, 'data':data}
+    #rendered_template = render(request, 'index.html',context)
+    #return HttpResponse(rendered_template, content_type='text/html')
+    return render(request, 'index.html', context={'data': data})
 
 def search(request):
     response_message = 'This is the Ajax response'
