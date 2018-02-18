@@ -8,7 +8,7 @@ def find_organization(input_string):
     '''
     Find and return data from bberg API
     :param input_string: a string with length >= 3. If the length == 9 and consists of numbers: the string is org. number. Else: it can be or it is a org. name.
-    :return: data if exist, zero if there is no data
+    :return: data if exist, zero if there is no data + a boolean variable to describe kind of data
     '''
     #http://data.brreg.no/enhetsregisteret/enhet.{format}?page = {side} & size = {antall per side} & $filter = {filter}
     #http://data.brreg.no/enhetsregisteret/enhet/{orgnr}.{format}
@@ -16,9 +16,11 @@ def find_organization(input_string):
     #'http://data.brreg.no/enhetsregisteret/underenhet/874714852.json'  #
     #http://data.brreg.no/enhetsregisteret/underenhet/874714852.json
     data_to_return = []
+    reg_num = False
     url_enhet = 'http://data.brreg.no/enhetsregisteret/enhet'
     url_underenhet = 'http://data.brreg.no/enhetsregisteret/underenhet'
     if len(input_string) == 9 and input_string.isnumeric():
+        reg_num = True
         #url = 'http://data.brreg.no/enhetsregisteret/enhet'
         request_url = (url_enhet + '/{}.json').format(input_string)
         response = requests.get(request_url)
@@ -30,7 +32,7 @@ def find_organization(input_string):
                 data_to_return = get_data_from_jsson(raw_data)
             except(ValueError, KeyError, TypeError):
                 #print('something went wrong')
-                return 0
+                data_to_return = 0
         else:
             #url = 'http://data.brreg.no/enhetsregisteret/underenhet'
             request_url = (url_underenhet + '/{}.json').format(input_string)
@@ -42,9 +44,9 @@ def find_organization(input_string):
                     data_to_return = get_data_from_jsson(raw_data)
                 except(ValueError, KeyError, TypeError):
                     #print('something went wrong')
-                    return 0
+                    data_to_return = 0
             else:
-                return 0
+                data_to_return = 0
     #$filter=startswith(navn,'Brønnøy')
     #http://data.brreg.no/enhetsregisteret/enhet.{format}?page = {side} & size = {antall per side} & $filter = {filter}
     #http://data.brreg.no/enhetsregisteret/underenhet.{format}?page = {side} & size = {antall per side} & $filter = {filter}
@@ -69,7 +71,7 @@ def find_organization(input_string):
 
 
     #print(data_to_return)
-    return data_to_return
+    return (reg_num, data_to_return)
 
 
 def cont_search_data(raw_data):

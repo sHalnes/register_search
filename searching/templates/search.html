@@ -6,15 +6,21 @@
             <h3> {{ message }} </h3>
         {% endif %}
 
-    {% if data %}
-
-
-
+    {% if data and reg_num %}
 
              <ul>
             {% for element in data %}
 
                  <li> {{ element }}</a></li>
+
+            {% endfor %}
+            </ul>
+
+    {% elif data %}
+             <ul>
+            {% for x1, x2 in data %}
+
+                 <li> {{ x1 }} {{ x2 }}</a></li>
 
             {% endfor %}
             </ul>
