@@ -17,8 +17,8 @@ def index(request):
     if len(query) > 2:
         data = find_organization(query)
 
-    if len(query) == 9 and query.isnumeric() and data == 0:
-        response_message = "Ingen treff"
+    #if len(query) == 9 and query.isnumeric() and data == 0:
+    #    response_message = "Ingen treff"
     #context = {'title':response_message, 'query':query, 'data':data}
     #rendered_template = render(request, 'index.html',context)
     #return HttpResponse(rendered_template, content_type='text/html')
@@ -34,7 +34,7 @@ def search(request):
 #    if not data:
     if len(query) == 9 and query.isnumeric() and data == 0:
         response_message = "Ingen treff"
-    elif not query.isnumeric():
+    elif len(query) > 2 and not query.isnumeric():
         response_message = "Det finnes " + str(len(data)) + " treff: "
 
 #    context = {'title':response_message, 'query':query, 'data':data}
