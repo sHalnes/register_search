@@ -34,6 +34,8 @@ def search(request):
 #    if not data:
     if len(query) == 9 and query.isnumeric() and data == 0:
         response_message = "Ingen treff"
+    elif len(query) > 9 and query.isnumeric():
+        response_message = "Feil reg. nummer"
     elif len(query) > 2 and not query.isnumeric():
         response_message = "Det finnes " + str(len(data)) + " treff: "
 
