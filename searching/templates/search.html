@@ -29,11 +29,7 @@
 	<input name="search" id="search" type="search" value="{{ org_num }}" hidden/>
 	<button type="submit">{{ name }}</button>
 </form>
-                    {% if query %}
 
-    {% include 'orgview.html' %}
-
-    {% endif %}
                      </li>
 
 
@@ -44,5 +40,9 @@
     {% endif %}
 {% endif %}
 
+                    {% if query %}
 
+    {% include 'orgview.html' %}
+
+    {% endif %}
 
