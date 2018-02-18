@@ -11,7 +11,7 @@
              <ul>
             {% for element in data %}
 
-                 <li> {{ element }}</a></li>
+                 <li> {{ element }}</li>
 
             {% endfor %}
             </ul>
@@ -20,7 +20,7 @@
              <ul>
             {% for x1, x2 in data %}
 
-                 <li><a href="{% url 'index' x1 %}">{{ x2 }}</a></li>
+                 <li><a href="{% url 'search' x1 %}">{{ x2 }}</a></li>
 
                  <!--li> {{ x2 }} med organisasjonsnummeret {{ x1 }}</a></li-->
 
