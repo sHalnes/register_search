@@ -11,9 +11,11 @@ from django.template import loader
 def index(request):
     response_message = 'This is the response from index'
     query = request.POST.get('search', '')
-
+    data = []
+    
     # a simple query
-    data = find_organization(query)
+    if len(query) > 2:
+        data = find_organization(query)
 
     #context = {'title':response_message, 'query':query, 'data':data}
     #rendered_template = render(request, 'index.html',context)
@@ -23,9 +25,10 @@ def index(request):
 def search(request):
     response_message = ''
     query = request.POST.get('search', '')
-
+    data = []
     # a simple query
-    data = find_organization(query)
+    if len(query) > 2:
+        data = find_organization(query)
     if not data:
         response_message = "Ingen treff"
     elif not query.isnumeric():
