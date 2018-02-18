@@ -22,9 +22,9 @@
 
                 <li>
                     {{ name }} med organisasjonsnummeret {{ org_num }}
-<form id="form" role="form" action="{% url 'search' %}" method="post" hidden>
+<form id="form" role="form" action="{% url 'search' %}" method="post">
 	{% csrf_token %}
-	<input name="search" id="search" type="search" value="{{ org_num }}"/>
+	<input name="search" id="search" type="search" value="{{ org_num }}" hidden/>
 	<button type="submit">{{ name }}</button>
 </form>
                      </li>
