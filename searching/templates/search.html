@@ -8,7 +8,6 @@
             <h3> {{ message }} </h3>
         {% endif %}
 
-        {% if data[0].count == 2 %}
 
              <ul>
             {% for x1, x2 in data %}
@@ -17,12 +16,7 @@
 
             {% endfor %}
             </ul>
-        {% else %}
-            {% for element in data %}
-                <ul>
-                    <li> {{ element }} </li>
-                </ul>
-        {% endif %}
+
 
     {% endif %}
 {% endif %}
