@@ -17,11 +17,15 @@
 </form>
 <span id="search-result-container"></span>
 
+{% if title %}
+<p> {{title}} </p>
+{% endif %}
+
+
 {% if query %}
 
     {% include 'search.html' %}
 
-{%% else %%}
 
     <!--h1 class="h3">Ingenting å vise. <br> Prøv på nytt.</h1-->
 
