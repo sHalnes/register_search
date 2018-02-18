@@ -28,7 +28,7 @@ def search(request):
     data = find_organization(query)
     if not data:
         response_message = "Ingen treff"
-    elif len(data) > 1:
+    elif not query.isnumeric():
         response_message = str(len(data)) + "treff"
 
 #    context = {'title':response_message, 'query':query, 'data':data}
