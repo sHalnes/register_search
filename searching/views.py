@@ -16,7 +16,7 @@ def index(request):
     # a simple query
     if len(query) > 2:
         data = find_organization(query)
-        
+
     if len(query) == 9 and query.isnumeric() and data == 0:
         response_message = "Ingen treff"
     #context = {'title':response_message, 'query':query, 'data':data}
