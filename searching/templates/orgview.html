@@ -20,26 +20,6 @@
             {% endfor %}
             </ul>
 
-    {% elif data %}
-             <ul>
-            {% for org_num, name in data %}
-
-                <li>
-                    {% comment %}
-                    {{ name }} med organisasjonsnummeret {{ org_num }}
-                    {% endcomment %}
-<form id="form" role="form" action="{% url 'search' %}" method="post">
-	{% csrf_token %}
-	<input name="search" id="search" type="search" value="{{ org_num }}" hidden/>
-	<button type="submit">{{ name }}</button>
-</form>
-                     </li>
-
-
-
-            {% endfor %}
-            </ul>
-
     {% endif %}
 {% endif %}
 

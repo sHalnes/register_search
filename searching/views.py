@@ -39,6 +39,12 @@ def search(request):
     #elif len(query) > 2 and not query.isnumeric() and not query.isalpha() and data == 0:
     #    response_message = "Er du sikker dette er et riktig navn?"
 
+    if data and reg_num:
+        context = {'message': response_message, 'query': query, 'data': data, 'reg_num': reg_num}
+        rendered_template = render(request, 'orgview.html', context)
+        return HttpResponse(rendered_template, content_type='text/html')
+
+
     context = {'message':response_message, 'query':query, 'data':data, 'reg_num': reg_num}
     rendered_template = render(request, 'search.html',context)
     return HttpResponse(rendered_template, content_type='text/html')
