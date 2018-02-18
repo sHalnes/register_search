@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
 
 
-'''  {% if data.count > 1 %}
+'''
+                 <li><a href="{% url 'search' x1 %}">{{ x2 }}</a></li>
+
+
+{% if data.count > 1 %}
 
 {% for element in data %}
 

@@ -20,9 +20,8 @@
              <ul>
             {% for x1, x2 in data %}
 
-                 <li><a href="{% url 'search' x1 %}">{{ x2 }}</a></li>
 
-                 <!--li> {{ x2 }} med organisasjonsnummeret {{ x1 }}</a></li-->
+                 <li> {{ x2 }} med organisasjonsnummeret {{ x1 }}</li>
 
             {% endfor %}
             </ul>
