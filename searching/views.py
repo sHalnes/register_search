@@ -21,13 +21,18 @@ def index(request):
     return render(request, 'index.html', context={'title':response_message, 'data': data})
 
 def search(request):
-    response_message = 'This is the Ajax response from search'
+    response_message = ''
     query = request.POST.get('search', '')
 
     # a simple query
     data = find_organization(query)
+    if not data:
+        response_message = "Ingen treff"
+    elif len(data) > 1:
+        response_message = str(len(data)) + "treff"
+
 #    context = {'title':response_message, 'query':query, 'data':data}
-    context = {'title':response_message, 'query':query, 'data':data}
+    context = {'message':response_message, 'query':query, 'data':data}
     #    return render(request, 'index.html',context={'data': data})
     rendered_template = render(request, 'search.html',context)
     return HttpResponse(rendered_template, content_type='text/html')
