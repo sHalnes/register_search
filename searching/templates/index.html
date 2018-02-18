@@ -23,7 +23,10 @@
 {% endif %}
 {% endcomment %}
 
-{% if query %}
+{% if query and reg_num %}
+    <meta http-equiv="REFRESH" content="data;url={{ orgview }}">
+
+{% elif query %}
 
     {% include 'search.html' %}
 
