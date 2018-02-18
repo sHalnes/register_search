@@ -34,6 +34,8 @@ def search(request):
     # print out number of results
     elif len(query) > 2 and not query.isnumeric():
         response_message = "Det finnes " + str(len(data)) + " treff: "
+    elif len(query) >= 3 and not query.isnumeric() and not query.isalpha():
+        response_message = "Er du sikker dette er et riktig navn?"
 
 #    context = {'title':response_message, 'query':query, 'data':data}
     context = {'message':response_message, 'query':query, 'data':data}
