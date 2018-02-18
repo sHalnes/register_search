@@ -14,8 +14,8 @@ def index(request):
     data = []
     reg_num = False
     # a simple query. not sure I need it here
-    if len(query) > 2:
-        reg_num, data = find_organization(query)
+    #if len(query) > 2:
+     #   reg_num, data = find_organization(query)
 
     return render(request, 'index.html', context={'title':response_message, 'data': data, 'reg_num':reg_num})
 
