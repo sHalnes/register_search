@@ -13,29 +13,25 @@ def index(request):
     query = request.POST.get('search', '')
     data = []
 
-    # a simple query
-    if len(query) > 2:
-        data = find_organization(query)
+    # a simple query. not sure I need it here
+    #if len(query) > 2:
+    #    data = find_organization(query)
 
-    #if len(query) == 9 and query.isnumeric() and data == 0:
-    #    response_message = "Ingen treff"
-    #context = {'title':response_message, 'query':query, 'data':data}
-    #rendered_template = render(request, 'index.html',context)
-    #return HttpResponse(rendered_template, content_type='text/html')
     return render(request, 'index.html', context={'title':response_message, 'data': data})
 
 def search(request):
     response_message = ''
     query = request.POST.get('search', '')
     data = []
-    # a simple query
+    # we begin search as soon as number of letters is bigger than 2
     if len(query) > 2:
         data = find_organization(query)
-#    if not data:
+    # if number of letters == 9 and they are numbers, we looking for registration number
     if len(query) == 9 and query.isnumeric() and data == 0:
         response_message = "Ingen treff"
     elif len(query) > 9 and query.isnumeric():
         response_message = "Feil reg. nummer"
+    # print out number of results
     elif len(query) > 2 and not query.isnumeric():
         response_message = "Det finnes " + str(len(data)) + " treff: "
 
