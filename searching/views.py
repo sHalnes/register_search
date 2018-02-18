@@ -9,7 +9,7 @@ from django.template import loader
 
 
 def index(request):
-    response_message = 'This is the response'
+    #response_message = 'This is the response'
     query = request.POST.get('search', '')
 
     # a simple query
@@ -21,12 +21,13 @@ def index(request):
     return render(request, 'index.html', context={'data': data})
 
 def search(request):
-    response_message = 'This is the Ajax response'
+    #response_message = 'This is the Ajax response'
     query = request.POST.get('search', '')
 
     # a simple query
     data = find_organization(query)
-    context = {'title':response_message, 'query':query, 'data':data}
+#    context = {'title':response_message, 'query':query, 'data':data}
+    context = {'query':query, 'data':data}
     #    return render(request, 'index.html',context={'data': data})
     rendered_template = render(request, 'search.html',context)
     return HttpResponse(rendered_template, content_type='text/html')
