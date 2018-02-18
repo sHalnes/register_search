@@ -24,7 +24,7 @@
                     {{ name }} med organisasjonsnummeret {{ org_num }}
 <form id="form" role="form" action="{% url 'index' %}" method="post">
 	{% csrf_token %}
-	<input name="search" id="search" type="hidden" value={{ org_num }}/>
+	<input name="search" id="search" type="submit" value={{ org_num }}/>
 	<button type="submit">{{ name }}</button>
 </form>
                      </li>
