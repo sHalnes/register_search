@@ -12,12 +12,12 @@ def index(request):
     response_message = 'This is the response from index'
     query = request.POST.get('search', '')
     data = []
-
+    reg_num = False
     # a simple query. not sure I need it here
-    #if len(query) > 2:
-    #    data = find_organization(query)
+    if len(query) > 2:
+        reg_num, data = find_organization(query)
 
-    return render(request, 'index.html', context={'title':response_message, 'data': data})
+    return render(request, 'index.html', context={'title':response_message, 'data': data, 'reg_num':reg_num})
 
 def search(request):
     response_message = ''
@@ -27,7 +27,7 @@ def search(request):
     # we begin search as soon as number of letters is bigger than 2
     if len(query) > 2:
         reg_num, data = find_organization(query)
-    # if number of letters == 9 and they are numbers, we looking for registration number
+    # in case we cannot find data about reg number or organization's name
     if (len(query) == 9 and query.isnumeric() and data == 0) or (len(query) > 2 and not query.isnumeric() and data == 0):
         response_message = "Ingen treff"
     elif len(query) > 9 and query.isnumeric():
