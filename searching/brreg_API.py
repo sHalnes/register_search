@@ -140,13 +140,13 @@ def get_data_from_jsson(raw_data):
 
 
 #print('underenhet')
-find_organization('874714852')
+#find_organization('874714852')
 #print('\nenhet')
 #find_organization('974760673')
 #print('\nenhet')
 #find_organization('912660680')
-find_organization('Kartv')
+#find_organization('Kartv')
 
-find_organization('Br%C3%B8nn%C3%B8y')
-find_organization('Brønnøy')
+#find_organization('Br%C3%B8nn%C3%B8y')
+#find_organization('Brønnøy')
 
