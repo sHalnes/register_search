@@ -67,7 +67,7 @@ def find_organization(input_string):
                 #print(data_to_return)
             except(ValueError, KeyError, TypeError):
                 #print('something went wrong')
-                return 0
+                data_to_return = 0
         else:
             data_to_return = 0
 
