@@ -8,6 +8,36 @@
                  <li><a href="{% url 'search' x1 %}">{{ x2 }}</a></li>
 
 
+
+
+
+
+
+<form id="form" role="form" action="{% url 'index' %}" method="post">
+    {% csrf_token %}
+    <input name="search"
+           type="search"
+           id="search"
+           placeholder="Tast inn regnum eller navn"
+           ic-post-to="{% url 'search' %}"
+           ic-trigger-on="keyup changed"
+           ic-trigger-delay="30ms"
+           ic-target="#search-result-container"
+    />
+    <!--button type="submit">SøK!</button-->
+</form>
+<form name="search" method="post" action="{% url 'index' %}">
+        {% csrf_token %}
+    <input type="hidden" name="supporttype" id="search"/>
+    <input type="submit" value="{{ org_num }}" />
+</form>
+<button type="submit">{{ name }}</button>
+
+
+
+
+
+
 {% if data.count > 1 %}
 
 {% for element in data %}

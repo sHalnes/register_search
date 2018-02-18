@@ -20,7 +20,16 @@
              <ul>
             {% for org_num, name in data %}
 
-                <li><a href="{% url 'index' org_num %}">{{ name }}</a></li>
+                <li>
+                    {{ name }} med organisasjonsnummeret {{ org_num }}
+                    <form name="search" method="post" action="{% url 'index' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="supporttype" id="search"/>
+                    <input type="submit" value="{{ org_num }}" />
+                    </form>
+                    <button type="submit">{{ name }}</button>
+                     </li>
+
 
 
             {% endfor %}
