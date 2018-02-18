@@ -12,7 +12,7 @@ def index(request):
     response_message = 'This is the response from index'
     query = request.POST.get('search', '')
     data = []
-    
+
     # a simple query
     if len(query) > 2:
         data = find_organization(query)
