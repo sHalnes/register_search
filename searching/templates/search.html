@@ -18,9 +18,9 @@
 
     {% elif data %}
              <ul>
-            {% for x1, x2 in data %}
+            {% for org_num, name in data %}
 
-                <li><a href="{% url 'index' %}">{{ x2 }}</a></li>
+                <li><a href="{% url 'index' org_num %}">{{ name }}</a></li>
 
 
             {% endfor %}
