@@ -28,7 +28,7 @@ def search(request):
     data = find_organization(query)
     context = {'title':response_message, 'query':query, 'data':data}
     #    return render(request, 'index.html',context={'data': data})
-    rendered_template = render(request, 'index.html',context)
+    rendered_template = render(request, 'search.html',context)
     return HttpResponse(rendered_template, content_type='text/html')
 '''
 def index(request):
