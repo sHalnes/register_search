@@ -29,7 +29,8 @@ def search(request):
     # a simple query
     if len(query) > 2:
         data = find_organization(query)
-    if not data:
+#    if not data:
+    if data == 0:
         response_message = "Ingen treff"
     elif not query.isnumeric():
         response_message = "Det finnes " + str(len(data)) + " treff: "
