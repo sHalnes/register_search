@@ -21,12 +21,12 @@
 {% if title %}
 <p> {{title}} </p>
 {% endif %}
-{% endcomment %}
 
 {% if query and reg_num %}
     <meta http-equiv="REFRESH" content="data;url={{ orgview }}">
+{% endcomment %}
 
-{% elif query %}
+{% if query %}
 
     {% include 'search.html' %}
 
