@@ -75,6 +75,11 @@ def orgview(request):
     context = {'message':response_message, 'query':query, 'data':data, 'reg_num': reg_num}
     rendered_template = render(request, 'orgview.html',context)
     return HttpResponse(rendered_template, content_type='text/html')
+
+
+def links(request):
+    rendered_template = render(request, 'links.html',context={})
+    return HttpResponse(rendered_template, content_type='text/html')
 '''
 def index(request):
     if request.method == 'POST':
