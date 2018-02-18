@@ -45,7 +45,28 @@ def search(request):
 
 
 def orgview(request):
-    pass
+    response_message = ''
+    query = request.POST.get('search', '')
+    data = []
+    reg_num = False
+    # we begin search as soon as number of letters is bigger than 2
+    if len(query) > 2:
+        reg_num, data = find_organization(query)
+    # in case we cannot find data about reg number or organization's name
+    if (len(query) == 9 and query.isnumeric() and data == 0) or (len(query) > 2 and not query.isnumeric() and data == 0):
+        response_message = "Ingen treff"
+    elif len(query) > 9 and query.isnumeric():
+        response_message = "Feil reg. nummer"
+    # print out number of results
+    elif len(query) > 2 and not query.isnumeric():
+        response_message = "Det finnes " + str(len(data)) + " treff: "
+    # if user try to search special symbols
+    #elif len(query) > 2 and not query.isnumeric() and not query.isalpha() and data == 0:
+    #    response_message = "Er du sikker dette er et riktig navn?"
+
+    context = {'message':response_message, 'query':query, 'data':data, 'reg_num': reg_num}
+    rendered_template = render(request, 'orgview.html',context)
+    return HttpResponse(rendered_template, content_type='text/html')
 '''
 def index(request):
     if request.method == 'POST':
