@@ -32,7 +32,7 @@ def search(request):
     if not data:
         response_message = "Ingen treff"
     elif not query.isnumeric():
-        response_message = str(len(data)) + "treff"
+        response_message = "Det finnes " + str(len(data)) + " treff: "
 
 #    context = {'title':response_message, 'query':query, 'data':data}
     context = {'message':response_message, 'query':query, 'data':data}
