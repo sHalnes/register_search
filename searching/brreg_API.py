@@ -43,6 +43,8 @@ def find_organization(input_string):
                 except(ValueError, KeyError, TypeError):
                     #print('something went wrong')
                     return 0
+            else:
+                return 0
     #$filter=startswith(navn,'Brønnøy')
     #http://data.brreg.no/enhetsregisteret/enhet.{format}?page = {side} & size = {antall per side} & $filter = {filter}
     #http://data.brreg.no/enhetsregisteret/underenhet.{format}?page = {side} & size = {antall per side} & $filter = {filter}
