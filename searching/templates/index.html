@@ -3,12 +3,13 @@
 {% block content %}
 
 <!--h1>Søk i Enhetsregisteret</h1-->
+<p>Tast inn foretaksnavn eller organisasjonsnummer</p>
 <form id="form" role="form" action="{% url 'index' %}" method="post">
     {% csrf_token %}
     <input name="search"
            type="search"
            id="search"
-           placeholder="Tast inn regnum eller navn"
+           placeholder="Tast inn navn eller nummer"
            ic-post-to="{% url 'search' %}"
            ic-trigger-on="keyup changed"
            ic-trigger-delay="30ms"
