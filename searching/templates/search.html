@@ -11,12 +11,7 @@
 
              <ul>
             {% for element in data %}
-                 {% if element == "J" %}
-
-                 <!-- Doing nothing-->
-                 {% else %}
                  <li>{{ element|urlize }}</li>
-                 {% endif %}
             {% endfor %}
             </ul>
             {% include 'map.html' %}
