@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd3978a8-1296-46d4-a305-ea219b1be190" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/searching/brreg_API.py" afterPath="$PROJECT_DIR$/searching/brreg_API.py" />
+      <change beforePath="$PROJECT_DIR$/searching/templates/orgview.html" afterPath="$PROJECT_DIR$/searching/templates/orgview.html" />
+      <change beforePath="$PROJECT_DIR$/searching/templates/search.html" afterPath="$PROJECT_DIR$/searching/templates/search.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,23 +30,23 @@
         <entry file="file://$PROJECT_DIR$/searching/templates/orgview.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+              <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="search.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/searching/templates/search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="71" lean-forward="false" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
+            <state relative-caret-position="225">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="brreg_API.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="brreg_API.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/searching/brreg_API.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="453">
@@ -124,9 +125,9 @@
         <option value="$PROJECT_DIR$/searching/templates/footer.html" />
         <option value="$PROJECT_DIR$/searching/templates/index.html" />
         <option value="$PROJECT_DIR$/searching/templates/base.html" />
+        <option value="$PROJECT_DIR$/searching/brreg_API.py" />
         <option value="$PROJECT_DIR$/searching/templates/orgview.html" />
         <option value="$PROJECT_DIR$/searching/templates/search.html" />
-        <option value="$PROJECT_DIR$/searching/brreg_API.py" />
       </list>
     </option>
   </component>
@@ -422,14 +423,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/searching/templates/orgview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/searching/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
@@ -486,14 +479,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/searching/templates/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="71" lean-forward="false" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/searching/brreg_API.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
@@ -501,6 +486,22 @@
           <folding>
             <element signature="e#24#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searching/templates/orgview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searching/templates/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -11,8 +11,13 @@
 
              <ul>
             {% for element in data %}
+                {% if element == "J" %}
+                       <h1 class="text-danger">KONKURS!</h1>
+                 {% elif element == "N"%}
+                 <!-- Doing nothing-->
+                 {% else %}
                  <li>{{ element|urlize }}</li>
-            {% endfor %}
+                 {% endif %}            {% endfor %}
             </ul>
             {% include 'map.html' %}
     {% elif data %}
