@@ -3,30 +3,26 @@
 {% block content %}
     <h1>Søk i Enhetsregisteret</h1>
 
+    {% if query %}
+        <h3>Du søkte for:<i> {{ query }} </i></h3>
 
-{% if query %}
-    <h3>Du søkte for:<i> {{ query }} </i></h3>
+            {% if message %}
+                <h3> {{ message }} </h3>
+            {% endif %}
 
-        {% if message %}
-            <h3> {{ message }} </h3>
-        {% endif %}
+            {% if data and reg_num %}
 
-    {% if data and reg_num %}
+                 <ul>
+                    {% for element in data %}
 
-             <ul>
-            {% for element in data %}
+                        <li> {{ element }}</li>
 
-                 <li> {{ element }}</li>
+                    {% endfor %}
+                 </ul>
 
-            {% endfor %}
-            </ul>
-
+            {% endif %}
     {% endif %}
-{% endif %}
 
-
-
-
-
+    {% include 'map.html' %}
 
 {% endblock %}

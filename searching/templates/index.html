@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Søk i Enhetsregisteret</h1>
+
+<h1>Søk i Enhetsregisteret</h1>
 <form id="form" role="form" action="{% url 'index' %}" method="post">
     {% csrf_token %}
     <input name="search"
@@ -13,28 +14,13 @@
            ic-trigger-delay="30ms"
            ic-target="#search-result-container"
     />
-    <!--button type="submit">SøK!</button-->
 </form>
 <span id="search-result-container"></span>
-
-{% comment %}
-{% if title %}
-<p> {{title}} </p>
-{% endif %}
-
-{% if query and reg_num %}
-    <meta http-equiv="REFRESH" content="data;url={{ orgview }}">
-{% endcomment %}
 
 {% if query %}
 
     {% include 'search.html' %}
 
-
-    <!--h1 class="h3">Ingenting å vise. <br> Prøv på nytt.</h1-->
-
 {% endif %}
-
-
 
 {% endblock %}
