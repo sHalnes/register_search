@@ -21,7 +21,7 @@
             {% for org_num, name in data %}
 
                 <!--li-->
-                    <form id="form" role="form" action="{% url 'overview' %}" method="post">
+                    <form id="form" role="form" action="{% url 'orgrview' %}" method="post">
 	                {% csrf_token %}
                         <input name="search" id="search" type="search" value="{{ org_num }}" hidden/>
 	                    <button class="btn btn-link" type="submit">{{ name }}</button>
