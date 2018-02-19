@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd3978a8-1296-46d4-a305-ea219b1be190" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/searching/templates/index.html" afterPath="$PROJECT_DIR$/searching/templates/index.html" />
+      <change beforePath="$PROJECT_DIR$/searching/templates/base.html" afterPath="$PROJECT_DIR$/searching/templates/base.html" />
+      <change beforePath="$PROJECT_DIR$/searching/templates/footer.html" afterPath="$PROJECT_DIR$/searching/templates/footer.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -91,7 +92,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/searching/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -101,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/searching/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="62" column="61" lean-forward="false" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
+            <state relative-caret-position="385">
+              <caret line="65" column="38" lean-forward="false" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -138,7 +139,6 @@
         <option value="$PROJECT_DIR$/searching/static/css/styles.css" />
         <option value="$PROJECT_DIR$/register_search/static/assets/js/ajax.js" />
         <option value="$PROJECT_DIR$/searching/templates/searching/index.html" />
-        <option value="$PROJECT_DIR$/searching/templates/footer.html" />
         <option value="$PROJECT_DIR$/searching/old_code_delete_late.py" />
         <option value="$PROJECT_DIR$/searching/urls.py" />
         <option value="$PROJECT_DIR$/searching/data.txt" />
@@ -148,15 +148,16 @@
         <option value="$PROJECT_DIR$/searching/brreg_API.py" />
         <option value="$PROJECT_DIR$/searching/templates/links.html" />
         <option value="$PROJECT_DIR$/searching/templates/orgview.html" />
-        <option value="$PROJECT_DIR$/searching/templates/base.html" />
         <option value="$PROJECT_DIR$/searching/templates/search.html" />
         <option value="$PROJECT_DIR$/searching/templates/index.html" />
+        <option value="$PROJECT_DIR$/searching/templates/footer.html" />
+        <option value="$PROJECT_DIR$/searching/templates/base.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="416" />
-    <option name="y" value="58" />
+    <option name="x" value="87" />
+    <option name="y" value="50" />
     <option name="width" value="1390" />
     <option name="height" value="877" />
   </component>
@@ -254,10 +255,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="416" y="58" width="1390" height="877" extended-state="0" />
+    <frame x="87" y="50" width="1390" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.034331627" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15850987" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -400,14 +401,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/searching/templates/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/searching/old_code_delete_late.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -510,13 +503,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/searching/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/searching/templates/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="61" lean-forward="false" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -525,6 +516,16 @@
         <state relative-caret-position="135">
           <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searching/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="65" column="38" lean-forward="false" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
