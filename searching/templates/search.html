@@ -13,9 +13,10 @@
             {% for element in data %}
                  {% if element == "J" %}
                  <h1>KONKURS!</h1>
+                 {% elif element == "N"%}
+                 <!-- Doing nothing-->
                  {% else %}
-                 {{ element|urlize }}
-                 <!--li> {#{ element }#}</li-->
+                 <li>{{ element|urlize }}</li>
                  {% endif %}
             {% endfor %}
             </ul>

@@ -111,7 +111,7 @@ def get_data_from_jsson(raw_data):
 
             if key == 'konkurs' and raw_data[key] == 'J':
                 data_to_return.append(raw_data[key])
-                continue
+
 
             data_str = ''
             data_str += keys_description[key]
