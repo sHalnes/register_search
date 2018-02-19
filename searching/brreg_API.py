@@ -9,6 +9,7 @@ def find_organization(input_string):
     :return: data if exist, zero if there is no data + a boolean variable to describe kind of data
     '''
     data_to_return = []
+    address = ()
     reg_num = False
     url_enhet = 'http://data.brreg.no/enhetsregisteret/enhet'
     url_underenhet = 'http://data.brreg.no/enhetsregisteret/underenhet'
@@ -20,7 +21,7 @@ def find_organization(input_string):
         if response.status_code == 200:
             try:
                 raw_data = json.loads(response.text)
-                data_to_return = get_data_from_jsson(raw_data)
+                data_to_return, address = get_data_from_jsson(raw_data)
             except(ValueError, KeyError, TypeError):
                 data_to_return = 0
         else:
@@ -29,7 +30,7 @@ def find_organization(input_string):
             if response.status_code == 200:
                 try:
                     raw_data = json.loads(response.text)
-                    data_to_return = get_data_from_jsson(raw_data)
+                    data_to_return, address = get_data_from_jsson(raw_data)
                 except(ValueError, KeyError, TypeError):
                     data_to_return = 0
             else:
@@ -49,7 +50,7 @@ def find_organization(input_string):
                 data_to_return = 0
         else:
             data_to_return = 0
-    return (reg_num, data_to_return)
+    return (reg_num, data_to_return, address)
 
 
 def cont_search_data(raw_data):
@@ -72,6 +73,7 @@ def get_data_from_jsson(raw_data):
     :return: list with data
     '''
     data_to_return = []
+    address_to_return = ()
 
     json_keys = {
         'organisasjonsnummer':['organisasjonsnummer'],
@@ -100,6 +102,9 @@ def get_data_from_jsson(raw_data):
         'konkurs': 'Konkurs: '
     }
 
+    address_keys = ['adresse', 'postnummer', 'poststed', 'kommunenummer', 'kommune']
+    address = []
+
     # retrieve data from raw json
     for key in json_keys:
         if key in raw_data and key in keys_description:
@@ -112,10 +117,24 @@ def get_data_from_jsson(raw_data):
             else:
                 data_str += str(raw_data[key])
             data_to_return.append(data_str)
+    if 'beliggenhetsadresse' in raw_data:
+        for element in address_keys:
+            address.append(raw_data['beliggenhetsadresse'][element])
+    elif 'forretningsadresse' in raw_data:
+        for element in address_keys:
+            address.append(raw_data['forretningsadresse'][element])
 
-    return data_to_return
+    street_data = address[0].split()
+    street = address[0][:(len(address[0] - len(street_data[-1]-1)))]
+    building = street_data[-1]
+    postnummer = address[1]
+    poststed = address[2]
+    kommunenummer = address[3]
+    kommune = address[4]
+    address_to_return = (street, building, postnummer, poststed, kommunenummer, kommune)
+    return data_to_return, address_to_return
 
-
+#address = ('Havnegata','48','8900', 'BRØNNØYSUND','1813', 'BRØNNØY')
 #print('underenhet')
 #find_organization('874714852')
 #print('\nenhet')
