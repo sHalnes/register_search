@@ -11,13 +11,13 @@
 
              <ul>
             {% for element in data %}
-                 {% if element == "J" %}
-                 <h1>KONKURS! in search</h1>
-                 {% elif element == "N"%}
+                 {#% if element == "J" %#}
+                 <!--h1>KONKURS! in search</h1-->
+                 {#% elif element == "N"%#}
                  <!-- Doing nothing-->
-                 {% else %}
+                 {#% else %#}
                  <li>{{ element|urlize }}</li>
-                 {% endif %}
+                 {#% endif %#}
             {% endfor %}
             </ul>
             {% include 'map.html' %}
@@ -27,7 +27,7 @@
             {% for org_num, name in data %}
 
                 <!--li-->
-                    <form id="form" role="form" action="{% url 'search' %}" method="post">
+                    <form id="form" role="form" action="{% url 'overview' %}" method="post">
 	                {% csrf_token %}
                         <input name="search" id="search" type="search" value="{{ org_num }}" hidden/>
 	                    <button class="btn btn-link" type="submit">{{ name }}</button>
