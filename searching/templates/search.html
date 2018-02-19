@@ -11,8 +11,8 @@
 
              <ul>
             {% for element in data %}
-
-                 <li> {{ element }}</li>
+                 <li>{{ element|urlize }}</li>
+                 <!--li> {#{ element }#}</li-->
 
             {% endfor %}
             </ul>
