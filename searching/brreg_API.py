@@ -52,7 +52,7 @@ def find_organization(input_string):
                 data_to_return = 0
         else:
             data_to_return = 0
-    return (reg_num, data_to_return, lat_lon)
+    return (reg_num, data_to_return)
 #    return (reg_num, data_to_return, address)
 
 
