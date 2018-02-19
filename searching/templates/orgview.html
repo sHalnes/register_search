@@ -1,11 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <!--h1>Søk i Enhetsregisteret</h1-->
-
     {% if query %}
         <h3>Du søkte for:<i> {{ query }} </i></h3>
-
             {% if message %}
                 <h3> {{ message }} </h3>
             {% endif %}
@@ -15,23 +12,21 @@
                  <ul>
                     {% for element in data %}
 
-                 {% if element == "J" %}
-                       <h1 class="text-danger">KONKURS!</h1>
-
-
-                 {% elif element == "N"%}
-                 <!-- Doing nothing-->
-                 {% else %}
-                 <li>{{ element|urlize }}</li>
-                 {% endif %}
+                        {% if element == "J" %}
+                            <h1 class="text-danger">KONKURS!</h1>
+                        {% elif element == "N"%}
+                            <!-- Doing nothing-->
+                        {% else %}
+                            <li>{{ element|urlize }}</li>
+                        {% endif %}
                     {% endfor %}
                  </ul>
 
             {% endif %}
     {% endif %}
 
-{% if reg_num %}
-    {% include 'map.html' %}
-{% endif %}
+    {% if reg_num %}
+        {% include 'map.html' %}
+    {% endif %}
 
 {% endblock %}

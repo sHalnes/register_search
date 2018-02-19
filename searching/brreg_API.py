@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import json
 import requests
+from . import kartverket_API
 
 def find_organization(input_string):
     '''
@@ -9,7 +10,8 @@ def find_organization(input_string):
     :return: data if exist, zero if there is no data + a boolean variable to describe kind of data
     '''
     data_to_return = []
-    address = ()
+    #address = ()
+    lat_lon = 0
     reg_num = False
     url_enhet = 'http://data.brreg.no/enhetsregisteret/enhet'
     url_underenhet = 'http://data.brreg.no/enhetsregisteret/underenhet'
@@ -21,7 +23,7 @@ def find_organization(input_string):
         if response.status_code == 200:
             try:
                 raw_data = json.loads(response.text)
-                data_to_return = get_data_from_jsson(raw_data)
+                data_to_return, lat_lon = get_data_from_jsson(raw_data)
             except(ValueError, KeyError, TypeError):
                 data_to_return = 0
         else:
@@ -30,7 +32,7 @@ def find_organization(input_string):
             if response.status_code == 200:
                 try:
                     raw_data = json.loads(response.text)
-                    data_to_return = get_data_from_jsson(raw_data)
+                    data_to_return, lat_lon = get_data_from_jsson(raw_data)
                 except(ValueError, KeyError, TypeError):
                     data_to_return = 0
             else:
@@ -50,7 +52,7 @@ def find_organization(input_string):
                 data_to_return = 0
         else:
             data_to_return = 0
-    return (reg_num, data_to_return)
+    return (reg_num, data_to_return, lat_lon)
 #    return (reg_num, data_to_return, address)
 
 
@@ -102,8 +104,7 @@ def get_data_from_jsson(raw_data):
         'konkurs': '' #'Konkurs: '
     }
 
-    #address_keys = ['adresse', 'postnummer', 'poststed', 'kommunenummer', 'kommune']
-    #address = []
+
 
     # retrieve data from raw json
     for key in json_keys:
@@ -122,32 +123,27 @@ def get_data_from_jsson(raw_data):
                     data_str += str(raw_data[key])
                 data_to_return.append(data_str)
 
-    # if 'beliggenhetsadresse' in raw_data:
-    #     for element in address_keys:
-    #         address.append(raw_data['beliggenhetsadresse'][element])
-    # elif 'forretningsadresse' in raw_data:
-    #     for element in address_keys:
-    #         address.append(raw_data['forretningsadresse'][element])
-    #
-    # street_data = address[0].split()
-    # street = address[0][:(len(address[0] - len(street_data[-1]-1)))]
-    # building = street_data[-1]
-    # postnummer = address[1]
-    # poststed = address[2]
-    # kommunenummer = address[3]
-    # kommune = address[4]
-    # address_to_return = (street, building, postnummer, poststed, kommunenummer, kommune)
-    return data_to_return
+    # trying to get address
+    address_keys = ['adresse', 'postnummer', 'poststed', 'kommunenummer', 'kommune']
+    address = []
+    if 'beliggenhetsadresse' in raw_data:
+        for element in address_keys:
+            address.append(raw_data['beliggenhetsadresse'][element])
+    elif 'forretningsadresse' in raw_data:
+        for element in address_keys:
+            address.append(raw_data['forretningsadresse'][element])
+
+    street_data = address[0].split()
+    street = address[0][:(len(address[0] - len(street_data[-1]-1)))]
+    building = street_data[-1]
+    postnummer = address[1]
+    poststed = address[2]
+    kommunenummer = address[3]
+    kommune = address[4]
+    address = (street, building, postnummer, poststed, kommunenummer, kommune)
+    lat_lon = kartverket_API.get_geodata(address)
+
+    return data_to_return, lat_lon
 
 #address = ('Havnegata','48','8900', 'BRØNNØYSUND','1813', 'BRØNNØY')
-#print('underenhet')
-#find_organization('874714852')
-#print('\nenhet')
-#find_organization('974760673')
-#print('\nenhet')
-#find_organization('912660680')
-#find_organization('Kartv')
-
-#find_organization('Br%C3%B8nn%C3%B8y')
-#find_organization('Brønnøy')
 

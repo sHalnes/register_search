@@ -18,7 +18,7 @@ def get_geodata(address):
             lat, lon = find_coords(raw_data,address)
         except(ValueError, KeyError, TypeError):
             return 0
-    return lat, lon
+    return (lat, lon)
 
 def find_coords(raw_data, address):
     street, building, postnumber, poststed, kommunenumber, kommune = address
@@ -31,7 +31,7 @@ def find_coords(raw_data, address):
                 raw_data['adresser'][i]['kommunenavn'] == kommune):
             lat = raw_data['adresser'][i]['nord']
             lon = raw_data['adresser'][i]['aust']
-            return lat, lon
+            return (lat, lon)
     return 0
 
 

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#SECRET_KEY = "@zudr3e%^%=(5noc-z0y^p9^8&mhtnci@3+&ipleqfavsu1)bj"
 
 
 '''

@@ -2,7 +2,6 @@
 
 {% block content %}
 
-<!--h1>Søk i Enhetsregisteret</h1-->
 <p>Tast inn foretaksnavn eller organisasjonsnummer</p>
 <form id="form" role="form" action="{% url 'index' %}" method="post">
     {% csrf_token %}

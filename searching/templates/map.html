@@ -1,4 +1,3 @@
-<!--title>Kartverkets kart</title-->
 
 <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
 
@@ -8,22 +7,16 @@
 
 {% if latlon %}
 {% for lat, lon in latlon %}
-<div id="map" style="height: 400px; width: 600px;"></div>
+    <div id="map" class="col-md-6"></div>
+        <!--div id="map" style="height: 400px; width: 600px;"></div-->
 
 <script>
-            var map = L.map('map').setView([{{ lat }}, {{ lon }}], 11);
-            L.tileLayer('http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart_graatone&zoom={z}&x={x}&y={y}', {
-                attribution: '<a href="http://www.kartverket.no/">Kartverket</a>'
-            }).addTo(map);
-            var marker = L.marker([{{ lat }}, {{ lon }}]).addTo(map);
-            marker.bindPopup("<b>Vi er her!</b><br>").openPopup();
-        </script>
+        var map = L.map('map').setView([{{ lat }}, {{ lon }}], 11);
+        L.tileLayer('http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart_graatone&zoom={z}&x={x}&y={y}', {
+                attribution: '<a href="http://www.kartverket.no/">Kartverket</a>'}).addTo(map);
+        var marker = L.marker([{{ lat }}, {{ lon }}]).addTo(map);
+        marker.bindPopup("<b>Vi er her!</b><br>").openPopup();
+</script>
 {% endfor %}
 {% endif %}
-<!--
-adressesoek
-http://ws.geonorge.no/adresse/dok/AdresseWS_sok.html#enkelt%20adressesøk
 
-kart fra kartverket
-
--->
