@@ -50,7 +50,8 @@ def find_organization(input_string):
                 data_to_return = 0
         else:
             data_to_return = 0
-    return (reg_num, data_to_return, address)
+    return (reg_num, data_to_return)
+#    return (reg_num, data_to_return, address)
 
 
 def cont_search_data(raw_data):
@@ -117,6 +118,7 @@ def get_data_from_jsson(raw_data):
             else:
                 data_str += str(raw_data[key])
             data_to_return.append(data_str)
+
     if 'beliggenhetsadresse' in raw_data:
         for element in address_keys:
             address.append(raw_data['beliggenhetsadresse'][element])
