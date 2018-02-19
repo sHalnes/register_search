@@ -99,7 +99,7 @@ def get_data_from_jsson(raw_data):
         'postadresse': 'Postadresse: ',
         'beliggenhetsadresse': 'Beliggenhet: ',
         'forretningsadresse': 'Beliggenhet: ',
-        'konkurs': 'Konkurs: '
+        'konkurs': '' #'Konkurs: '
     }
 
     #address_keys = ['adresse', 'postnummer', 'poststed', 'kommunenummer', 'kommune']
@@ -108,6 +108,11 @@ def get_data_from_jsson(raw_data):
     # retrieve data from raw json
     for key in json_keys:
         if key in raw_data and key in keys_description:
+
+            if key == 'konkurs' and raw_data[key] == 'J':
+                data_to_return.append(raw_data[key])
+                continue
+
             data_str = ''
             data_str += keys_description[key]
             if len(json_keys[key]) > 1:
