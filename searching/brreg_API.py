@@ -111,17 +111,16 @@ def get_data_from_jsson(raw_data):
 
             if key == 'konkurs' and raw_data[key] == 'J':
                 data_to_return.append(raw_data[key])
-
-
-            data_str = ''
-            data_str += keys_description[key]
-            if len(json_keys[key]) > 1:
-                for underkey in range(1, len(json_keys[key])):
-                    if json_keys[key][underkey] in raw_data[key]:
-                        data_str += str(raw_data[key][json_keys[key][underkey]])+' '
-            else:
-                data_str += str(raw_data[key])
-            data_to_return.append(data_str)
+            elif key != 'konkurs':
+                data_str = ''
+                data_str += keys_description[key]
+                if len(json_keys[key]) > 1:
+                    for underkey in range(1, len(json_keys[key])):
+                        if json_keys[key][underkey] in raw_data[key]:
+                            data_str += str(raw_data[key][json_keys[key][underkey]])+' '
+                else:
+                    data_str += str(raw_data[key])
+                data_to_return.append(data_str)
 
     # if 'beliggenhetsadresse' in raw_data:
     #     for element in address_keys:
