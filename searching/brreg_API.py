@@ -11,7 +11,7 @@ def find_organization(input_string):
     '''
     data_to_return = []
     #address = ()
-    lat_lon = 0
+    #lat_lon = 0
     reg_num = False
     url_enhet = 'http://data.brreg.no/enhetsregisteret/enhet'
     url_underenhet = 'http://data.brreg.no/enhetsregisteret/underenhet'
@@ -23,7 +23,7 @@ def find_organization(input_string):
         if response.status_code == 200:
             try:
                 raw_data = json.loads(response.text)
-                data_to_return, lat_lon = get_data_from_jsson(raw_data)
+                data_to_return = get_data_from_jsson(raw_data)
             except(ValueError, KeyError, TypeError):
                 data_to_return = 0
         else:
@@ -32,7 +32,7 @@ def find_organization(input_string):
             if response.status_code == 200:
                 try:
                     raw_data = json.loads(response.text)
-                    data_to_return, lat_lon = get_data_from_jsson(raw_data)
+                    data_to_return = get_data_from_jsson(raw_data)
                 except(ValueError, KeyError, TypeError):
                     data_to_return = 0
             else:
@@ -124,26 +124,26 @@ def get_data_from_jsson(raw_data):
                 data_to_return.append(data_str)
 
     # trying to get address
-    address_keys = ['adresse', 'postnummer', 'poststed', 'kommunenummer', 'kommune']
-    address = []
-    if 'beliggenhetsadresse' in raw_data:
-        for element in address_keys:
-            address.append(raw_data['beliggenhetsadresse'][element])
-    elif 'forretningsadresse' in raw_data:
-        for element in address_keys:
-            address.append(raw_data['forretningsadresse'][element])
+    # address_keys = ['adresse', 'postnummer', 'poststed', 'kommunenummer', 'kommune']
+    # address = []
+    # if 'beliggenhetsadresse' in raw_data:
+    #     for element in address_keys:
+    #         address.append(raw_data['beliggenhetsadresse'][element])
+    # elif 'forretningsadresse' in raw_data:
+    #     for element in address_keys:
+    #         address.append(raw_data['forretningsadresse'][element])
+    #
+    # street_data = address[0].split()
+    # street = address[0][:(len(address[0] - len(street_data[-1]-1)))]
+    # building = street_data[-1]
+    # postnummer = address[1]
+    # poststed = address[2]
+    # kommunenummer = address[3]
+    # kommune = address[4]
+    # address = (street, building, postnummer, poststed, kommunenummer, kommune)
+    # lat_lon = kartverket_API.get_geodata(address)
 
-    street_data = address[0].split()
-    street = address[0][:(len(address[0] - len(street_data[-1]-1)))]
-    building = street_data[-1]
-    postnummer = address[1]
-    poststed = address[2]
-    kommunenummer = address[3]
-    kommune = address[4]
-    address = (street, building, postnummer, poststed, kommunenummer, kommune)
-    lat_lon = kartverket_API.get_geodata(address)
-
-    return data_to_return, lat_lon
+    return data_to_return
 
 #address = ('Havnegata','48','8900', 'BRØNNØYSUND','1813', 'BRØNNØY')
 
