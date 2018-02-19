@@ -16,7 +16,6 @@
 
             {% endfor %}
             </ul>
-    {% include 'map.html' %}
     {% elif data %}
 
              <ul>
@@ -36,5 +35,6 @@
     {% endif %}
 {% endif %}
 
-
-
+{% if reg_num %}
+    {% include 'map.html' %}
+{% endif %}
