@@ -49,10 +49,9 @@
   </div>
 </nav>
 
-
     <div class="jumbotron text-center">
-    <h1>Søk i Enhetsregisteret</h1>
-    <p>Finn foretak/selskap</p>
+        <h1>Søk i Enhetsregisteret</h1>
+        <p>Finn foretak/selskap</p>
     </div>
 
 
@@ -61,16 +60,16 @@
 
 
     <div class="row">
-  <!--div class="center-block" style="width:200px;background-color:#ccc;"-->
-  <div class="center-block">
+        <div class="center-block col-md-4" style="float: none; background-color: grey">
+            {% block content %}{% endblock %}
+        </div>
 
-      {% block content %}{% endblock %}
-  </div>
+    </div>
 
       <!--div class="col-sm-10 ">
 
       </div-->
-    </div>
+    <!--/div-->
 
   <!--/div-->
 
