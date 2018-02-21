@@ -13,8 +13,25 @@ def index(request):
     # a simple query. not sure I need it here
     reg_num, data = find_organization(query)
 #    reg_num, data, adresse = find_organization(query)
-    return render(request, 'index.html', context={'title':response_message, 'data': data, 'reg_num':reg_num})
-    #return render(request, 'index.html', context={'title':response_message, 'data': data})
+
+    if len(query) > 2:
+        reg_num, data = find_organization(query)
+    #        reg_num, data, adresse = find_organization(query)
+    # in case we cannot find data about reg number or organization's name
+    if (len(query) == 9 and query.isnumeric() and data == 0) or (
+            len(query) > 2 and not query.isnumeric() and data == 0):
+        response_message = "Ingen treff"
+    elif len(query) > 9 and query.isnumeric():
+        response_message = "Feil reg. nummer"
+    # print out number of results
+    elif len(query) > 2 and not query.isnumeric():
+        response_message = "Det finnes " + str(len(data)) + " treff: "
+    context = {'message': response_message, 'query': query, 'data': data, 'reg_num': reg_num}
+    rendered_template = render(request, 'index.html', context)
+    return HttpResponse(rendered_template, content_type='text/html')
+
+
+    #return render(request, 'index.html', context={'title':response_message, 'data': data, 'reg_num':reg_num})
 
 def search(request):
     response_message = ''
