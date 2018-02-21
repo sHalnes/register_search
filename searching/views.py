@@ -46,7 +46,7 @@ def orgview(request):
     :param request: reg number
     :return: HTTP response with data from API about the company.
     '''
-    response_message = ''
+    response_message = 'in orgview'
     query = request.POST.get('search', '')
 #    reg_num, data, adresse = find_organization(query)
     reg_num, data = find_organization(query)
