@@ -6,12 +6,13 @@ from django.http import HttpResponse
 # this was a try to implement map
 
 def index(request):
-    response_message = 'This is the response from index'
+    #response_message = 'This is the response from index'
     query = request.POST.get('search', '')
-    data = []
-    reg_num = False
+    #data = []
+    #reg_num = False
     # a simple query. not sure I need it here
-    reg_num, data = find_organization(query)
+    #reg_num, data = find_organization(query)
+
 #    reg_num, data, adresse = find_organization(query)
     #return render(request, 'index.html', context={'title':response_message, 'data': data, 'reg_num':reg_num})
     return render(request, 'index.html', context={})
