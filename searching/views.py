@@ -8,8 +8,11 @@ from django.http import HttpResponse
 def index(request):
     #response_message = 'This is the response from index'
     query = request.POST.get('search', '')
-    if len(query) == 9 and query.isnumeric():
-        return render(request, 'index.html', context={'reg': True})    #data = []
+
+    #if len(query) == 9 and query.isnumeric():
+    #    return render(request, 'index.html', context={'reg': True})
+
+    #data = []
     #reg_num = False
     # a simple query. not sure I need it here
     #reg_num, data = find_organization(query)
@@ -46,7 +49,7 @@ def orgview(request):
     :param request: reg number
     :return: HTTP response with data from API about the company.
     '''
-    response_message = 'in orgview'
+    response_message = ''
     query = request.POST.get('search', '')
 #    reg_num, data, adresse = find_organization(query)
     reg_num, data = find_organization(query)

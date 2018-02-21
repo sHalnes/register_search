@@ -18,9 +18,9 @@
 </form>
 <span id="search-result-container"></span>
 <!-- here we can check if query is of length 9 and all numbers we can call orgview, else search-->
-{% if query and reg %}
-{% url 'orgview' %}
-{% elif query %}
+{#% if query and reg %#}
+{#% url 'orgview' %#}
+{% if query %}
 
     {% include 'search.html' %}
 
