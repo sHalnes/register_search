@@ -8,7 +8,8 @@ from django.http import HttpResponse
 def index(request):
     #response_message = 'This is the response from index'
     query = request.POST.get('search', '')
-    #data = []
+    if len(query) == 9 and query.isnumeric():
+        return render(request, 'index.html', context={'reg': True})    #data = []
     #reg_num = False
     # a simple query. not sure I need it here
     #reg_num, data = find_organization(query)
