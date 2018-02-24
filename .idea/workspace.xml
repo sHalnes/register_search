@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd3978a8-1296-46d4-a305-ea219b1be190" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/searching/templates/map.html" afterPath="$PROJECT_DIR$/searching/templates/map.html" />
       <change beforePath="$PROJECT_DIR$/searching/views.py" afterPath="$PROJECT_DIR$/searching/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/searching/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="35" column="25" lean-forward="false" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+            <state relative-caret-position="309">
+              <caret line="88" column="35" lean-forward="false" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -35,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="map.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/searching/templates/map.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+            <state relative-caret-position="285">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -127,8 +128,8 @@
         <option value="$PROJECT_DIR$/searching/brreg_API.py" />
         <option value="$PROJECT_DIR$/searching/templates/search.html" />
         <option value="$PROJECT_DIR$/searching/templates/orgview.html" />
-        <option value="$PROJECT_DIR$/searching/templates/map.html" />
         <option value="$PROJECT_DIR$/searching/views.py" />
+        <option value="$PROJECT_DIR$/searching/templates/map.html" />
       </list>
     </option>
   </component>
@@ -594,16 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/searching/templates/map.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/searching/templates/search.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
@@ -614,10 +605,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/searching/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="35" column="25" lean-forward="false" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+        <state relative-caret-position="309">
+          <caret line="88" column="35" lean-forward="false" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searching/templates/map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
