@@ -54,6 +54,11 @@ def orgview(request):
     query = request.POST.get('search', '')
 #    reg_num, data, adresse = find_organization(query)
     reg_num, data, latlon = find_organization(query)
+
+    with open('coords.txt', 'w') as file:
+        s = str(latlon[0])+' '+str(latlon[1])
+        file.write(s)
+
     context = {'message':response_message, 'query':query, 'data':data, 'reg_num': reg_num, 'latlon':latlon}
     rendered_template = render(request, 'orgview.html',context)
     return HttpResponse(rendered_template, content_type='text/html')
@@ -68,7 +73,11 @@ def map(request):
     #    lat, lon = get_geodata(adresse)
     #    context = {'latlon': (float(lat), float(lon))}
     #else:
-    context = {}
+    latlon = (0,0)
+    with open('coords.txt', 'r') as file:
+        s = file.readline().split()
+        latlon = (float(s[0]), float(s[1]))
+    context = {'latlon':latlon}
     # address = ('Havnegata','48','8900', 'BRØNNØYSUND','1813', 'BRØNNØY')
     # lat, lon = get_geodata(address)
     # context = {'latlon':(float(lat), float(lon))}

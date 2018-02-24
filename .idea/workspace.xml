@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd3978a8-1296-46d4-a305-ea219b1be190" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/searching/templates/map.html" afterPath="$PROJECT_DIR$/searching/templates/map.html" />
+      <change beforePath="$PROJECT_DIR$/searching/views.py" afterPath="$PROJECT_DIR$/searching/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/searching/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="55" column="37" lean-forward="false" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+            <state relative-caret-position="291">
+              <caret line="79" column="30" lean-forward="false" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -35,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="map.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/searching/templates/map.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -122,11 +122,11 @@
         <option value="$PROJECT_DIR$/searching/data.txt" />
         <option value="$PROJECT_DIR$/searching/test_1.py" />
         <option value="$PROJECT_DIR$/register_search/settings.py" />
-        <option value="$PROJECT_DIR$/searching/views.py" />
         <option value="$PROJECT_DIR$/searching/brreg_API.py" />
         <option value="$PROJECT_DIR$/searching/templates/orgview.html" />
         <option value="$PROJECT_DIR$/searching/templates/search.html" />
         <option value="$PROJECT_DIR$/searching/templates/map.html" />
+        <option value="$PROJECT_DIR$/searching/views.py" />
       </list>
     </option>
   </component>
@@ -570,16 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/searching/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="55" column="37" lean-forward="false" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/searching/brreg_API.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -611,6 +601,16 @@
         <state relative-caret-position="135">
           <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searching/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="79" column="30" lean-forward="false" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
