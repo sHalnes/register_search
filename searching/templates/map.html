@@ -5,7 +5,7 @@
 
 <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
 
-{% if latlon %}
+{% if latlon != (-1,-1) %}
 {% for lat, lon in latlon %}
     <div id="map" class="col-md-6"></div>
         <!--div id="map" style="height: 400px; width: 600px;"></div-->

@@ -140,3 +140,38 @@
 'totaltAntallTreff': '61036',
 'adresser': [{
 'type': 'Vegadresse', 'adressekode': '2150', 'adressenavn': 'Havnegata', 'kortadressenavn': 'Havnegata', 'husnr': '48', 'undernr': '0', 'postnr': '8900', 'poststed': 'BRØNNØYSUND', 'kommunenr': '1813', 'kommunenavn': 'BRØNNØY', 'gardsnr': '104', 'bruksnr': '490', 'festenr': '0', 'seksjonsnr': '0', 'bruksnavn': 'NORDBORG', 'nord': '65.4763697199912', 'aust': '12.212485222986407'}, {'type': 'Vegadresse', 'adressekode': '2150', 'adressenavn': 'Havnegata', 'kortadressenavn': 'Havnegata', 'husnr': '42', 'undernr': '0', 'postnr': '8900', 'poststed': 'BRØNNØYSUND', 'kommunenr': '1813', 'kommunenavn': 'BRØNNØY', 'gardsnr': '104', 'bruksnr': '488', 'festenr': '0', 'seksjonsnr': '0', 'bruksnavn': 'KAIEN 17', 'nord': '65.47592708390653', 'aust': '12.211365597755563'}, {'type': 'Vegadresse', 'adressekode': '2150', 'adressenavn': 'Havnegata', 'kortadressenavn': 'Havnegata', 'husnr': '36', 'undernr': '0', 'postnr': '8900', 'poststed': 'BRØNNØYSUND', 'kommunenr': '1813', 'kommunenavn': 'BRØNNØY', 'gardsnr': '104', 'bruksnr': '412', 'festenr': '0', 'seksjonsnr': '0', 'bruksnavn': 'FRYSERITOMTA I  KAIEN 9', 'nord': '65.47509410256458', 'aust': '12.21050372031501'}, {'type': 'Vegadresse', 'adressekode': '2150', 'adressenavn': 'Havnegata', 'kortadressenavn': 'Havnegata', 'husnr': '17', 'undernr': '0', 'postnr': '8900', 'poststed': 'BRØNNØYSUND', 'kommunenr': '1813', 'kommunenavn': 'BRØNNØY', 'gardsnr': '104', 'bruksnr': '64', 'festenr': '0', 'seksjonsnr': '0', 'bruksnavn': 'STRØMSNES', 'nord': '65.47275648989293', 'aust': '12.207641063888593'}, {'type': 'Vegadresse', 'adressekode': '2150', 'adressenavn': 'Havnegata', 'kortadressenavn': 'Havnegata', 'husnr': '39', 'undernr': '0', 'postnr': '8900', 'poststed': 'BRØNNØYSUND', 'kommunenr': '1813', 'kommunenavn': 'BRØNNØY', 'gardsnr': '104', 'bruksnr': '920', 'festenr': '0', 'seksjonsnr': '0', 'bruksnavn': 'HAVNEGATA 39', 'nord': '65.4751730971318', 'aust': '12.211770104837912'}, {'type': 'Vegadresse', 'adressekode': '2150', 'adressenavn': 'Havnegata', 'kortadressenavn': 'Havnegata', 'husnr': '16', 'undernr': '0', 'postnr': '8900', 'poststed': 'BRØNNØYSUND', 'kommunenr': '1813', 'kommunenavn': 'BRØNNØY', 'gardsnr': '104', 'bruksnr': '1398', 'festenr': '0', 'seksjonsnr': '0', 'nord': '65.47332618603792', 'aust': '12.20812123872384'}, {'type': 'Vegadresse', 'adressekode': '2150', 'adressenavn': 'Havnegata', 'kortadressenavn': 'Havnegata', 'husnr': '30', 'undernr': '0', 'postnr': '8900', 'poststed': 'BRØNNØYSUND', 'kommunenr': '1813', 'kommunenavn': 'BRØNNØY', 'gardsnr': '104', 'bruksnr': '164', 'festenr': '0', 'seksjonsnr': '0', 'bruksnavn': 'FAGERSTRAND', 'nord': '65.47451738282238', 'aust': '12.210392385541885'}, {'type': 'Vegadresse', 'adressekode': '2150', 'adressenavn': 'Havnegata', 'kortadressenavn': 'Havnegata', 'husnr': '34', 'undernr': '0', 'postnr': '8900', 'poststed': 'BRØNNØYSUND', 'kommunenr': '1813', 'kommunenavn': 'BRØNNØY', 'gardsnr': '104', 'bruksnr': '412', 'festenr': '0', 'seksjonsnr': '0', 'bruksnavn': 'FRYSERITOMTA I  KAIEN 9', 'nord': '65.47509410256458', 'aust': '12.21050372031501'}, {'type': 'Vegadresse', 'adressekode': '2150', 'adressenavn': 'Havnegata', 'kortadressenavn': 'Havnegata', 'husnr': '32', 'undernr': '0', 'postnr': '8900', 'poststed': 'BRØNNØYSUND', 'kommunenr': '1813', 'kommunenavn': 'BRØNNØY', 'gardsnr': '104', 'bruksnr': '326', 'festenr': '0', 'seksjonsnr': '0', 'bruksnavn': 'FELIXKAIEN', 'nord': '65.47484238357701', 'aust': '12.210487357266015'}, {'type': 'Vegadresse', 'adressekode': '2150', 'adressenavn': 'Havnegata', 'kortadressenavn': 'Havnegata', 'husnr': '40', 'undernr': '0', 'postnr': '8900', 'poststed': 'BRØNNØYSUND', 'kommunenr': '1813', 'kommunenavn': 'BRØNNØY', 'gardsnr': '104', 'bruksnr': '414', 'festenr': '0', 'seksjonsnr': '0', 'bruksnavn': 'KAIEN 13', 'nord': '65.4756453030406', 'aust': '12.21117957304441'}]}
+
+
+
+raw data:  {
+'organisasjonsnummer': 918837078,
+'navn': 'ACS CONSULTING EOOD',
+'registreringsdatoEnhetsregisteret': '2017-05-29',
+'maalform': 'Bokmål',
+'registrertIFrivillighetsregisteret': 'N',
+'registrertIMvaregisteret': 'N',
+'registrertIForetaksregisteret': 'J',
+'registrertIStiftelsesregisteret': 'N',
+'antallAnsatte': 0,
+'orgform': {
+    'kode': 'NUF',
+    'beskrivelse': 'Norskregistrert utenlandsk foretak'},
+    'institusjonellSektorkode': {
+        'kode': '2100',
+        'beskrivelse': 'Private aksjeselskaper mv.'
+        },
+    'naeringskode1': {
+        'kode': '71.129',
+        'beskrivelse': 'Annen teknisk konsulentvirksomhet'},
+        'forretningsadresse': {
+            'adresse': '14 Georgi Apostolov str',
+            'poststed': '6000 STARA ZAGORA',
+            'landkode': 'BG',
+            'land': 'Bulgaria'
+            },
+            'konkurs': 'N', 'underAvvikling': 'N', 'underTvangsavviklingEllerTvangsopplosning': 'N', 'links': [{'rel': 'self', 'href': 'http://data.brreg.no/enhetsregisteret/enhet/918837078'}], 'organisasjonsform': 'NUF'}
+
+
+{'Server': 'nginx', 'Date': 'Thu, 22 Feb 2018 17:36:28 GMT',
+'Content-Type': 'text/html', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Last-Modified': 'Wed, 07 Feb 2018 17:44:37 GMT', 'ETag': 'W/"5a7b3b05-88c"', 'Expires': 'Thu, 22 Feb 2018 17:36:27 GMT', 'Cache-Control': 'no-cache', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains;', 'X-Frame-Options': 'SAMEORIGIN',
+'X-Content-Type-Options': 'nosniff', 'Content-Encoding': 'gzip'}
