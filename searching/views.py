@@ -74,9 +74,12 @@ def map(request):
     #    context = {'latlon': (float(lat), float(lon))}
     #else:
     latlon = (0,0)
-    with open('coords.txt', 'r') as file:
-        s = file.readline().split()
-        latlon = (float(s[0]), float(s[1]))
+    try:
+        with open('coords.txt', 'r') as file:
+            s = file.readline().split()
+            latlon = (float(s[0]), float(s[1]))
+    except FileNotFoundError:
+        pass
     context = {'latlon':latlon}
     # address = ('Havnegata','48','8900', 'BRØNNØYSUND','1813', 'BRØNNØY')
     # lat, lon = get_geodata(address)

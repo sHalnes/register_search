@@ -5,7 +5,7 @@
 
 <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
 
-{% if latlon != 0 %}
+{% if latlon %}
 {% for coord in latlon %}
 {{ coord.0 }} {{ coodr.1 }}
 {% if coord.1 > 0 %}
