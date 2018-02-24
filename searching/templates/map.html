@@ -8,7 +8,7 @@
 
 
 latlon is {{ latlon }}
-{% with lat, lon = latlon %}
+{% with lat = latlon.0, lon = latlon.1 %}
     lat is {{ lat }}
     lon is {{ lon }}
 {% endwith %}
