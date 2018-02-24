@@ -73,27 +73,7 @@ def links(request):
     return HttpResponse(rendered_template, content_type='text/html')
 
 def map(request,latlon):
-    #if len(lat_lon) > 0:
-    #    lat, lon = get_geodata(adresse)
-    #    context = {'latlon': (float(lat), float(lon))}
-    #else:
-    #latlon = []
-    # lat = -1
-    # lon = -1
-    # try:
-    #     with open('coords.txt', 'r') as file:
-    #         s = file.readline().split()
-    #         lat = float(s[0])
-    #         lon = float(s[1])
-    #         #if float(s[0]) > 0.0:
-    #         #    latlon = [float(s[0]), float(s[1])]
-    # except FileNotFoundError:
-    #     lat = -10
-    #     lon = -20
     context = {}
-    # address = ('Havnegata','48','8900', 'BRØNNØYSUND','1813', 'BRØNNØY')
-    # lat, lon = get_geodata(address)
-    # context = {'latlon':(float(lat), float(lon))}
     rendered_template = render(request, 'map.html',context)
     return HttpResponse(rendered_template, content_type='text/html')
 
