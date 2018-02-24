@@ -1,5 +1,5 @@
 
-<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
 
@@ -10,8 +10,7 @@
 
 {% if lat > 0.0 %}
 
-    <div id="map" class="col-md-4"></div>
-        <!--div id="map" style="height: 400px; width: 600px;"></div-->
+        <div id="map" style="height: 400px; width: 600px;"></div>
 
 <script>
         var map = L.map('map').setView([{{ lat }}, {{ lon }}], 11);
