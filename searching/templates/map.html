@@ -13,7 +13,7 @@
         <div id="map" style="height: 400px; width: 600px;"></div>
 
 <script>
-        var map = L.map('map').setView([{{ lat }}, {{ lon }}], 7);
+        var map = L.map('map').setView([{{ lat }}, {{ lon }}], 17);
 
         L.tileLayer('http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart_graatone&zoom={z}&x={x}&y={y}', {
                 attribution: '<a href="http://www.kartverket.no/">Kartverket</a>'}).addTo(map);
