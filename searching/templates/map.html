@@ -6,14 +6,13 @@
 <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
 {{ latlon }} in map
 {% if latlon %}
-{% for coord in latlon %}
-{{ coord.0 }} {{ coodr.1 }}
+{% for lat, lon in latlon %}
 {% if coord.1 > 0 %}
     <div id="map" class="col-md-6"></div>
         <!--div id="map" style="height: 400px; width: 600px;"></div-->
 
 <script>
-        var map = L.map('map').setView([{{ coord.0 }}, {{ coord.1 }}], 11);
+        var map = L.map('map').setView([{{ lat }}, {{ lon }}], 11);
         L.tileLayer('http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart_graatone&zoom={z}&x={x}&y={y}', {
                 attribution: '<a href="http://www.kartverket.no/">Kartverket</a>'}).addTo(map);
         var marker = L.marker([{{ lat }}, {{ lon }}]).addTo(map);
