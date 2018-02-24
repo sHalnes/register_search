@@ -59,10 +59,6 @@ def orgview(request):
     reg_num, data, latlon = find_organization(query)
     lat = latlon[0]
     lon = latlon[1]
-    # with open('coords.txt', 'w') as file:
-    #     s = str(latlon[0])+' '+str(latlon[1])
-    #     file.write(s)
-
     context = {'message':response_message, 'query':query, 'data':data, 'reg_num': reg_num, 'lat':lat, 'lon':lon}
     rendered_template = render(request, 'orgview.html',context)
     return HttpResponse(rendered_template, content_type='text/html')
@@ -72,7 +68,7 @@ def links(request):
     rendered_template = render(request, 'links.html',context={})
     return HttpResponse(rendered_template, content_type='text/html')
 
-def map(request,latlon):
+def map(request):
     context = {}
     rendered_template = render(request, 'map.html',context)
     return HttpResponse(rendered_template, content_type='text/html')
