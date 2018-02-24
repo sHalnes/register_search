@@ -6,7 +6,8 @@
 <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
 {{ latlon }} in map
 {% if latlon %}
-{% for lat, lon in latlon %}
+{#% for lat, lon in latlon %#}
+{{ lat }}, {{ lon }} = {{ latlon }}
 {% if lat > 0 %}
     <div id="map" class="col-md-6"></div>
         <!--div id="map" style="height: 400px; width: 600px;"></div-->
@@ -19,6 +20,6 @@
         marker.bindPopup("<b>Vi er her!</b><br>").openPopup();
 </script>
 {% endif %}
-{% endfor %}
+{#% endfor %#}
 {% endif %}
 
