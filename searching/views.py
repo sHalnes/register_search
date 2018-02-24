@@ -21,7 +21,6 @@ def search(request):
         reg_num, data, latlon = find_organization(query)
         lat = latlon[0]
         lon = latlon[1]
-#        reg_num, data, adresse = find_organization(query)
     # in case we cannot find data about reg number or organization's name
     if (len(query) == 9 and query.isnumeric() and data == 0) or (len(query) > 2 and not query.isnumeric() and data == 0):
         response_message = "Ingen treff"
