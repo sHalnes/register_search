@@ -87,7 +87,8 @@ def map(request):
             #if float(s[0]) > 0.0:
             #    latlon = [float(s[0]), float(s[1])]
     except FileNotFoundError:
-        pass
+        lat = -10
+        lon = -20
     context = {'lat':lat, 'lon':lon}
     # address = ('Havnegata','48','8900', 'BRØNNØYSUND','1813', 'BRØNNØY')
     # lat, lon = get_geodata(address)
