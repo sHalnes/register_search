@@ -31,9 +31,9 @@ def search(request):
     # we begin search as soon as number of letters is bigger than 2
     if len(query) > 2:
         reg_num, data, latlon = find_organization(query)
-        with open('coords.txt', 'w') as file:
-            s = str(latlon[0]) + ' ' + str(latlon[1])
-            file.write(s)
+        # with open('coords.txt', 'w') as file:
+        #     s = str(latlon[0]) + ' ' + str(latlon[1])
+        #     file.write(s)
 #        reg_num, data, adresse = find_organization(query)
     # in case we cannot find data about reg number or organization's name
     if (len(query) == 9 and query.isnumeric() and data == 0) or (len(query) > 2 and not query.isnumeric() and data == 0):
@@ -58,9 +58,9 @@ def orgview(request):
 #    reg_num, data, adresse = find_organization(query)
     reg_num, data, latlon = find_organization(query)
 
-    with open('coords.txt', 'w') as file:
-        s = str(latlon[0])+' '+str(latlon[1])
-        file.write(s)
+    # with open('coords.txt', 'w') as file:
+    #     s = str(latlon[0])+' '+str(latlon[1])
+    #     file.write(s)
 
     context = {'message':response_message, 'query':query, 'data':data, 'reg_num': reg_num, 'latlon':latlon}
     rendered_template = render(request, 'orgview.html',context)
@@ -77,19 +77,19 @@ def map(request,latlon):
     #    context = {'latlon': (float(lat), float(lon))}
     #else:
     #latlon = []
-    lat = -1
-    lon = -1
-    try:
-        with open('coords.txt', 'r') as file:
-            s = file.readline().split()
-            lat = float(s[0])
-            lon = float(s[1])
-            #if float(s[0]) > 0.0:
-            #    latlon = [float(s[0]), float(s[1])]
-    except FileNotFoundError:
-        lat = -10
-        lon = -20
-    context = {'lat':lat, 'lon':lon}
+    # lat = -1
+    # lon = -1
+    # try:
+    #     with open('coords.txt', 'r') as file:
+    #         s = file.readline().split()
+    #         lat = float(s[0])
+    #         lon = float(s[1])
+    #         #if float(s[0]) > 0.0:
+    #         #    latlon = [float(s[0]), float(s[1])]
+    # except FileNotFoundError:
+    #     lat = -10
+    #     lon = -20
+    context = {}
     # address = ('Havnegata','48','8900', 'BRØNNØYSUND','1813', 'BRØNNØY')
     # lat, lon = get_geodata(address)
     # context = {'latlon':(float(lat), float(lon))}

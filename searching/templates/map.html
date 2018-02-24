@@ -4,9 +4,17 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
 
 <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
-in map: {{ lat }}, {{ lon }}
 {{ latlon }}
-{% if lat > 0 %}
+
+
+latlon is {{ latlon }}
+{% with lat, lon = latlon %}
+    lat is {{ lat }}
+    lon is {{ lon }}
+{% endwith %}
+
+
+{% if lat > 0.0 %}
 
     <!--div id="map" class="col-md-6"></div-->
         <div id="map" style="height: 400px; width: 600px;"></div>
