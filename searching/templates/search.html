@@ -21,8 +21,6 @@
         {% endfor %}
     </ul>
 
-    {% include 'map.html' %}
-
     {% elif data %}
         <ul>
             {% for org_num, name in data %}
@@ -34,5 +32,7 @@
             {% endfor %}
         </ul>
     {% endif %}
+    {% include 'map.html' %}
+
 {% endif %}
 
