@@ -65,15 +65,13 @@ def find_organization(input_string):
         if response.status_code == 200:
             try:
                 raw_data = json.loads(response.text)
-                data_to_return = get_data_from_jsson(raw_data)
-            except Exception as inst:
-                print(type(inst))  # the exception instance
-                print(inst.args)  # arguments stored in .args
-                print(inst)
-            # except(ValueError, KeyError, TypeError):
-            #     print()
-            #     print('something went wrong')
-            #     data_to_return = 0
+                data_to_return, lat_lon = get_data_from_jsson(raw_data)
+            # except Exception as inst:
+            #     print(type(inst))  # the exception instance
+            #     print(inst.args)  # arguments stored in .args
+            #     print(inst)
+            except(ValueError, KeyError, TypeError):
+                data_to_return = 0
         else:
             request_url = (url_underenhet + '/{}.json').format(input_string)
             response = requests.get(request_url)
