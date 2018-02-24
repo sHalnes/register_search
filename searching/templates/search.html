@@ -33,7 +33,8 @@
     {% endif %}
 {% if reg_num and lat %}
 <p> we wish map</p>
-    {% include 'map.html' %}
+
+    {% include 'map.html' with lat=lat, lon=lon %}
 {% endif %}
 
 {% endif %}
