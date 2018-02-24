@@ -26,7 +26,7 @@ SECRET_KEY = "@zudr3e%^%=(5noc-z0y^p9^8&mhtnci@3+&ipleqfavsu1)bj"
 #    SECRET_KEY = file.read()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True#False
 
 # Application definition
 
