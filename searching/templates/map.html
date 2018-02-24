@@ -4,14 +4,8 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
 
 <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
-{{ latlon }}
 
 
-latlon is {{ latlon }}
-{% with lat = latlon[0], lon = latlon[1] %}
-    lat is {{ lat }}
-    lon is {{ lon }}
-{% endwith %}
 
 
 {% if lat > 0.0 %}
