@@ -209,13 +209,13 @@ def get_data_from_jsson(raw_data):
 
 #address = ('Havnegata','48','8900', 'BRØNNØYSUND','1813', 'BRØNNØY')
 
-test_cases = ['988997072','918837078', '919767553','990256039','990873739','987740353']
-for test in test_cases:
-    a,b,c = find_organization(test)
-    print(test)
-    print(a)
-    print(b)
-    print(c, end='\n\n')
+#test_cases = ['988997072','918837078', '919767553','990256039','990873739','987740353']
+#for test in test_cases:
+#    a,b,c = find_organization(test)
+#    print(test)
+#    print(a)
+#    print(b)
+#    print(c, end='\n\n')
 
 
 #find_organization('988997072')

@@ -71,7 +71,7 @@ def links(request):
     rendered_template = render(request, 'links.html',context={})
     return HttpResponse(rendered_template, content_type='text/html')
 
-def map(request):
+def map(request,latlon):
     #if len(lat_lon) > 0:
     #    lat, lon = get_geodata(adresse)
     #    context = {'latlon': (float(lat), float(lon))}
