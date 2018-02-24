@@ -31,6 +31,9 @@ def search(request):
     # we begin search as soon as number of letters is bigger than 2
     if len(query) > 2:
         reg_num, data, latlon = find_organization(query)
+        with open('coords.txt', 'w') as file:
+            s = str(latlon[0]) + ' ' + str(latlon[1])
+            file.write(s)
 #        reg_num, data, adresse = find_organization(query)
     # in case we cannot find data about reg number or organization's name
     if (len(query) == 9 and query.isnumeric() and data == 0) or (len(query) > 2 and not query.isnumeric() and data == 0):
