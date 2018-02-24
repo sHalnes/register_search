@@ -73,11 +73,11 @@ def map(request):
     #    lat, lon = get_geodata(adresse)
     #    context = {'latlon': (float(lat), float(lon))}
     #else:
-    latlon = (0,0)
+    latlon = []
     try:
         with open('coords.txt', 'r') as file:
             s = file.readline().split()
-            latlon = (float(s[0]), float(s[1]))
+            latlon = [float(s[0]), float(s[1])]
     except FileNotFoundError:
         pass
     context = {'latlon':latlon}

@@ -7,19 +7,20 @@
 {{ latlon }} in map
 {% if latlon %}
 {#% for lat, lon in latlon %#}
-{{ lat }}, {{ lon }} = {{ latlon }}
-{% if lat > 0 %}
+{#% if lat > 0 %#}
     <div id="map" class="col-md-6"></div>
         <!--div id="map" style="height: 400px; width: 600px;"></div-->
 
 <script>
+        //var map = L.map('map').setView({{ latlon }}, 11);
         var map = L.map('map').setView([{{ lat }}, {{ lon }}], 11);
+
         L.tileLayer('http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart_graatone&zoom={z}&x={x}&y={y}', {
                 attribution: '<a href="http://www.kartverket.no/">Kartverket</a>'}).addTo(map);
         var marker = L.marker([{{ lat }}, {{ lon }}]).addTo(map);
         marker.bindPopup("<b>Vi er her!</b><br>").openPopup();
 </script>
-{% endif %}
+{#% endif %#}
 {#% endfor %#}
 {% endif %}
 
