@@ -6,15 +6,13 @@
 <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
 
 
-<p> look at map</p>
-{{ lat }}, {{ lon }}
 {% if lat > 0.0 %}
 
         <div id="map" style="height: 400px; width: 400px;"></div>
         <!--div id="map" style="float: none"></div-->
 
 <script>
-        var map = L.map('map').setView([{{ lat }}, {{ lon }}], 15);
+        var map = L.map('map').setView([{{ lat }}, {{ lon }}], 14);
 
         L.tileLayer('http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart_graatone&zoom={z}&x={x}&y={y}', {
                 attribution: '<a href="http://www.kartverket.no/">Kartverket</a>'}).addTo(map);
