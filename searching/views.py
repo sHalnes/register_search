@@ -77,6 +77,8 @@ def map(request):
     #    context = {'latlon': (float(lat), float(lon))}
     #else:
     #latlon = []
+    lat = -1
+    lon = -1
     try:
         with open('coords.txt', 'r') as file:
             s = file.readline().split()
