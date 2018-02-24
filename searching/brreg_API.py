@@ -213,8 +213,8 @@ def get_data_from_jsson(raw_data):
 
 test_cases = ['988997072','918837078', '919767553','990256039','990873739','987740353']
 for test in test_cases:
-    a,b = find_organization(test)
-    print(test,a, b,end='\n\n')
+    a,b,c = find_organization(test)
+    print(test,a, b,c, end='\n\n')
 
 
 #find_organization('988997072')
